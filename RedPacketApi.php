@@ -106,13 +106,12 @@ class RedPacketApi
      * @return bool|SimpleXMLElement
      */
     public function sendRedPacket(Array $parameters){
-        // 官方硬性要求
-        $stime = date('H:i');
-        if ($stime < '08:00') {
-            $this->error = '请北京时间0：00-8：00时间之外触发红包赠送';
-            return false;
-        }
-
+        // 官方硬性要求,貌似新版已经取消
+//        $stime = date('H:i');
+//        if ($stime < '08:00') {
+//            $this->error = '请北京时间0：00-8：00时间之外触发红包赠送';
+//            return false;
+//        }
         $required = [
             're_openid',
             'nick_name',
